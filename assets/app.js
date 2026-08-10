@@ -221,11 +221,15 @@ function drawChart() {
   document.getElementById('chart-small').textContent =
     `$${t.entryPrice.toFixed(2)} → $${t.latestPrice.toFixed(2)}`;
 
-  const hasApprox = t.checkpoints.some(c => c.approx);
+  const dailyCount = t.checkpoints.length - 1;   // checkpoints[0] is Entry
   document.getElementById('chart-note').textContent =
-    `Plotted from ${t.checkpoints.length} confirmed price checkpoint${t.checkpoints.length > 1 ? 's' : ''} pulled from episode chart books / desk notes` +
-    (hasApprox ? ' (one or more dates are approximate where the source quote was undated)' : '') +
-    `. Line is interpolated between checkpoints, not a true daily close feed — connect a market-data API to replace with real end-of-day series.`;
+    `Plotted from the entry price plus ${dailyCount} daily close${dailyCount === 1 ? '' : 's'} ` +
+    `(unadjusted end-of-day series).` +
+    (t.direction === 'short'
+      ? ' Bearish thesis — change is signed so a falling underlying reads as positive.'
+      : '') +
+    ` Change is the underlying's signed move, not position P&L — collars are capped and debit ` +
+    `spreads don't track the underlying dollar-for-dollar, especially near strikes.`;
 
   const labels = t.checkpoints.map(c => fmtDate(c.date));
   const data = t.checkpoints.map(c => c.price);

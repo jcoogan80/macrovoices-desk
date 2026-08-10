@@ -5,6 +5,7 @@
     "name": "Global X U.S. Infrastructure Development ETF",
     "dateRec": "2026-06-04",
     "structure": "Long PAVE shares + Jul 17 '26 $55 protective put (~$1.25)",
+    "direction": "long",
     "thesis": "Position for a broader shift toward rebuilding the physical economy as infrastructure, supply chains, transportation, energy systems, and strategic manufacturing become central to economic statecraft.",
     "notes": "Effective cost basis ~$58.49; floor $55.00 through Jul 17 '26 expiry; no covered call — full upside retained.",
     "checkpoints": [
@@ -244,6 +245,7 @@
     "name": "Health Care Select Sector SPDR ETF",
     "dateRec": "2026-06-11",
     "structure": "Long XLV shares + Aug '26 collar (buy $145 put ~$1.90 / sell $165 call ~$1.24, ~$0.66 net debit)",
+    "direction": "long",
     "thesis": "Position for a rotation back into healthcare as crowded momentum and AI-related trades become vulnerable, while healthcare begins showing signs of accumulation and relative improvement.",
     "notes": "Effective cost basis ~$153.51; floor $145, upside capped $165 — approaching but not yet at the cap.",
     "checkpoints": [
@@ -458,6 +460,7 @@
     "name": "Invesco DB Agriculture Fund",
     "dateRec": "2026-06-17",
     "structure": "Bull call spread: long Jan 15 '27 $27 call ($1.70) / short Jan 15 '27 $30 call ($0.80), $0.90 net debit",
+    "direction": "long",
     "thesis": "Building on Brent Johnson's delayed food-supply thesis; position for agricultural stress emerging into Q4 2026 and Q1 2027.",
     "notes": "Better than 2:1 payoff ($2.10 max) if DBA ≥ $30 at Jan 15 '27 expiry; max loss is the $0.90 debit; long-dated structure gives the thesis time to play out.",
     "checkpoints": [
@@ -652,6 +655,7 @@
     "name": "United States 12 Month Natural Gas Fund",
     "dateRec": "2026-06-25",
     "structure": "Long UNL — Delta-One, no options overlay",
+    "direction": "long",
     "thesis": "AI power-demand bottleneck / natural gas as bridge fuel. Chosen over UNG to avoid front-month contango roll drag.",
     "notes": "Simple buy-and-hold equity position, laddered exposure across the 12-month futures curve.",
     "checkpoints": [
@@ -821,6 +825,7 @@
     "name": "Valero Energy",
     "dateRec": "2026-07-02",
     "structure": "Bull call spread: long Aug 21 $270 call ($15.00) / short Aug 21 $300 call ($5.75), $9.25 net debit",
+    "direction": "long",
     "thesis": "Refiners directly benefit from strong crack spreads while crude itself remains sloppy/oversupplied — leaning into refiners rather than picking a bottom in crude.",
     "notes": "Max payoff $20.75 (>2:1) if VLO ≥ $300 at Aug 21 expiry; max loss is the $9.25 debit.",
     "checkpoints": [
@@ -965,6 +970,7 @@
     "name": "Energy Select Sector SPDR ETF",
     "dateRec": "2026-07-09",
     "structure": "Long XLE shares + Aug 21 '26 50/65 collar (buy $50 put ~$0.30 / sell $65 call ~$0.20, ~$0.10 net debit)",
+    "direction": "long",
     "thesis": "Energy offers a way to stay constructive on equities without adding to already-crowded AI/tech exposure.",
     "notes": "Hedge floor ~$50, upside capped ~$65; short call sits above 52-week high.",
     "checkpoints": [
@@ -1089,6 +1095,7 @@
     "name": "Cheniere Energy",
     "dateRec": "2026-07-16",
     "structure": "Long LNG shares + $240 protective put, 36 DTE (~$4.55)",
+    "direction": "long",
     "thesis": "US LNG buildout tied to energy security and AI/data-center power demand.",
     "notes": "Put hedge ~1.8% cost; technical failure/floor at $240.",
     "checkpoints": [
@@ -1188,6 +1195,7 @@
     "name": "SPDR Gold Shares",
     "dateRec": "2026-07-23",
     "structure": "Long GLD + put-spread collar: long Sep 18 $370 put ($8.50) / short Sep 18 $350 put ($3.50) / short Sep 18 $415 call ($3.25), $1.75 net cost",
+    "direction": "long",
     "thesis": "Gold, oil, and rates rising together may signal the market pricing in longer-term inflationary/fiscal consequences of prolonged war spending.",
     "notes": "Approaching the $415 call cap; upside above $415 is forfeited under this structure. Downside protection band ($370–$350) is well out of the money.",
     "checkpoints": [
@@ -1262,6 +1270,7 @@
     "name": "iShares 20+ Year Treasury Bond ETF",
     "dateRec": "2026-07-30",
     "structure": "Bear put spread: long Aug 21 $82 put ($0.80) / short Aug 21 $80 put ($0.30), $0.50 net debit",
+    "direction": "short",
     "thesis": "Inflation remains too persistent for the bond market to relax — either the Fed tightens or long yields do it for them.",
     "notes": "Max profit $1.50 (3-to-1) if TLT closes at/below $80 at expiration.",
     "checkpoints": [
@@ -1303,7 +1312,7 @@
     ],
     "entryPrice": 82.55,
     "latestPrice": 82.76,
-    "changePct": 0.25
+    "changePct": -0.25
   },
   {
     "episode": 544,
@@ -1311,6 +1320,7 @@
     "name": "Global X Robotics & Artificial Intelligence ETF",
     "dateRec": "2026-08-06",
     "structure": "Long BOTZ shares + Aug $37 protective put (~$0.60, 16 DTE)",
+    "direction": "long",
     "thesis": "Rotation out of crowded chip/infrastructure names into robotics & automation, a segment that already underwent a meaningful valuation reset.",
     "notes": "Put expires ~Aug 22, 2026; stop/exit logic keyed to $37.",
     "checkpoints": [
