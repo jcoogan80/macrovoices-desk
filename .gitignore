@@ -1,0 +1,7 @@
+# Intermediate per-ticker CSVs written by scripts/fetch_prices.py.
+# Only the rebuilt data/trades.json is committed.
+.price-cache/
+
+# Never commit an API key - it belongs in a GitHub Actions secret.
+*.key
+api?key.txt
