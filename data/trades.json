@@ -6,7 +6,7 @@
     "dateRec": "2026-06-04",
     "structure": "Long PAVE shares + Jul 17 '26 $55 protective put (~$1.25)",
     "thesis": "Position for a broader shift toward rebuilding the physical economy as infrastructure, supply chains, transportation, energy systems, and strategic manufacturing become central to economic statecraft.",
-    "notes": "Effective cost basis ~$58.49; floor $55.00 through Jul 17 '26 expiry; no covered call \u2014 full upside retained.",
+    "notes": "Effective cost basis ~$58.49; floor $55.00 through Jul 17 '26 expiry; no covered call — full upside retained.",
     "checkpoints": [
       {
         "date": "2026-06-04",
@@ -14,15 +14,229 @@
         "label": "Entry"
       },
       {
-        "date": "2026-08-10",
-        "price": 58.99,
-        "label": "Latest known (date approximate)",
-        "approx": true
+        "date": "2026-06-05",
+        "price": 56.68,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-08",
+        "price": 56.51,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-09",
+        "price": 57.17,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-10",
+        "price": 55.3,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-11",
+        "price": 57.18,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-12",
+        "price": 57.76,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-15",
+        "price": 58.17,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-16",
+        "price": 58.5,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-17",
+        "price": 57.98,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-18",
+        "price": 58.56,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-22",
+        "price": 59.24,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-23",
+        "price": 57.81,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-24",
+        "price": 58.41,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-25",
+        "price": 59.99,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-26",
+        "price": 58.84,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-29",
+        "price": 58.6,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-30",
+        "price": 58.92,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-01",
+        "price": 57.68,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-02",
+        "price": 57.15,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-06",
+        "price": 57.83,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-07",
+        "price": 56.44,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-08",
+        "price": 56.04,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-09",
+        "price": 56.42,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-10",
+        "price": 56.69,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-13",
+        "price": 56.23,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-14",
+        "price": 56.71,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-15",
+        "price": 56.64,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-16",
+        "price": 56.78,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-17",
+        "price": 56.3,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 55.7,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 56.2,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 56.6,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 57.51,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 57.69,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 57.48,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 57.1,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 54.99,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 56.1,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 56.36,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 57.54,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 58.58,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 58.65,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 58.35,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 58.69,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 57.24,
-    "latestPrice": 58.99,
-    "changePct": 3.06
+    "latestPrice": 58.69,
+    "changePct": 2.53
   },
   {
     "episode": 536,
@@ -31,7 +245,7 @@
     "dateRec": "2026-06-11",
     "structure": "Long XLV shares + Aug '26 collar (buy $145 put ~$1.90 / sell $165 call ~$1.24, ~$0.66 net debit)",
     "thesis": "Position for a rotation back into healthcare as crowded momentum and AI-related trades become vulnerable, while healthcare begins showing signs of accumulation and relative improvement.",
-    "notes": "Effective cost basis ~$153.51; floor $145, upside capped $165 \u2014 approaching but not yet at the cap.",
+    "notes": "Effective cost basis ~$153.51; floor $145, upside capped $165 — approaching but not yet at the cap.",
     "checkpoints": [
       {
         "date": "2026-06-11",
@@ -39,14 +253,204 @@
         "label": "Entry"
       },
       {
-        "date": "2026-07-30",
+        "date": "2026-06-12",
+        "price": 153.81,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-15",
+        "price": 152.89,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-16",
+        "price": 152.94,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-17",
+        "price": 150.71,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-18",
+        "price": 149.4,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-22",
+        "price": 150.06,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-23",
+        "price": 152.18,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-24",
+        "price": 153.35,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-25",
+        "price": 155.63,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-26",
+        "price": 160.34,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-29",
+        "price": 160.74,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-30",
+        "price": 158.66,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-01",
+        "price": 159.54,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-02",
+        "price": 163.74,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-06",
+        "price": 161.96,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-07",
+        "price": 164.44,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-08",
+        "price": 162.3,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-09",
         "price": 162.17,
-        "label": "Jul 30, 2026 close"
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-10",
+        "price": 160.84,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-13",
+        "price": 161.41,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-14",
+        "price": 158.29,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-15",
+        "price": 158.29,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-16",
+        "price": 161.8,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-17",
+        "price": 161.09,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 159.25,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 160.25,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 159.43,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 161.44,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 162.57,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 163.4,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 167.26,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 166.24,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 163.52,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 162.55,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 162.24,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 162.1,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 164.16,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 164.45,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 165.68,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 152.85,
-    "latestPrice": 162.17,
-    "changePct": 6.1
+    "latestPrice": 165.68,
+    "changePct": 8.39
   },
   {
     "episode": 537,
@@ -55,7 +459,7 @@
     "dateRec": "2026-06-17",
     "structure": "Bull call spread: long Jan 15 '27 $27 call ($1.70) / short Jan 15 '27 $30 call ($0.80), $0.90 net debit",
     "thesis": "Building on Brent Johnson's delayed food-supply thesis; position for agricultural stress emerging into Q4 2026 and Q1 2027.",
-    "notes": "Better than 2:1 payoff ($2.10 max) if DBA \u2265 $30 at Jan 15 '27 expiry; max loss is the $0.90 debit; long-dated structure gives the thesis time to play out.",
+    "notes": "Better than 2:1 payoff ($2.10 max) if DBA ≥ $30 at Jan 15 '27 expiry; max loss is the $0.90 debit; long-dated structure gives the thesis time to play out.",
     "checkpoints": [
       {
         "date": "2026-06-17",
@@ -63,22 +467,191 @@
         "label": "Entry"
       },
       {
-        "date": "2026-08-10",
-        "price": 27.7,
-        "label": "Latest known (date approximate)",
-        "approx": true
+        "date": "2026-06-18",
+        "price": 26.63,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-22",
+        "price": 26.65,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-23",
+        "price": 26.6,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-24",
+        "price": 26.56,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-25",
+        "price": 26.92,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-26",
+        "price": 26.8,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-29",
+        "price": 26.51,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-30",
+        "price": 26.67,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-01",
+        "price": 26.86,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-02",
+        "price": 26.74,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-06",
+        "price": 27.54,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-07",
+        "price": 27.55,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-08",
+        "price": 27.62,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-09",
+        "price": 27.71,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-10",
+        "price": 27.77,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-13",
+        "price": 27.72,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-14",
+        "price": 27.63,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-15",
+        "price": 27.98,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-16",
+        "price": 27.59,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-17",
+        "price": 27.84,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 28.02,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 28.15,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 28.23,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 28.24,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 28.24,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 27.62,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 27.84,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 27.49,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 27.48,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 27.51,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 27.79,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 27.66,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 27.63,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 27.43,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 27.62,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 26.84,
-    "latestPrice": 27.7,
-    "changePct": 3.2
+    "latestPrice": 27.62,
+    "changePct": 2.91
   },
   {
     "episode": 538,
     "ticker": "UNL",
     "name": "United States 12 Month Natural Gas Fund",
     "dateRec": "2026-06-25",
-    "structure": "Long UNL \u2014 Delta-One, no options overlay",
+    "structure": "Long UNL — Delta-One, no options overlay",
     "thesis": "AI power-demand bottleneck / natural gas as bridge fuel. Chosen over UNG to avoid front-month contango roll drag.",
     "notes": "Simple buy-and-hold equity position, laddered exposure across the 12-month futures curve.",
     "checkpoints": [
@@ -88,14 +661,159 @@
         "label": "Entry"
       },
       {
-        "date": "2026-07-12",
-        "price": 6.055,
-        "label": "Jul 12, 2026 close"
+        "date": "2026-06-26",
+        "price": 6.5,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-29",
+        "price": 6.36,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-06-30",
+        "price": 6.39,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-01",
+        "price": 6.35,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-02",
+        "price": 6.34,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-06",
+        "price": 6.28,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-07",
+        "price": 6.35,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-08",
+        "price": 6.33,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-09",
+        "price": 6.14,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-10",
+        "price": 6.05,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-13",
+        "price": 6.03,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-14",
+        "price": 6.06,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-15",
+        "price": 6.05,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-16",
+        "price": 6.02,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-17",
+        "price": 6.01,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 5.97,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 6.01,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 6.12,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 6.15,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 6.14,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 6.01,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 5.94,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 6.03,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 5.98,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 6.01,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 6.02,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 5.9,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 5.9,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 5.8,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 5.89,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 6.48,
-    "latestPrice": 6.055,
-    "changePct": -6.56
+    "latestPrice": 5.89,
+    "changePct": -9.1
   },
   {
     "episode": 539,
@@ -103,8 +821,8 @@
     "name": "Valero Energy",
     "dateRec": "2026-07-02",
     "structure": "Bull call spread: long Aug 21 $270 call ($15.00) / short Aug 21 $300 call ($5.75), $9.25 net debit",
-    "thesis": "Refiners directly benefit from strong crack spreads while crude itself remains sloppy/oversupplied \u2014 leaning into refiners rather than picking a bottom in crude.",
-    "notes": "Max payoff $20.75 (>2:1) if VLO \u2265 $300 at Aug 21 expiry; max loss is the $9.25 debit.",
+    "thesis": "Refiners directly benefit from strong crack spreads while crude itself remains sloppy/oversupplied — leaning into refiners rather than picking a bottom in crude.",
+    "notes": "Max payoff $20.75 (>2:1) if VLO ≥ $300 at Aug 21 expiry; max loss is the $9.25 debit.",
     "checkpoints": [
       {
         "date": "2026-07-02",
@@ -112,15 +830,134 @@
         "label": "Entry"
       },
       {
+        "date": "2026-07-06",
+        "price": 270.32,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-07",
+        "price": 266.22,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-08",
+        "price": 282.88,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-09",
+        "price": 281.25,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-10",
+        "price": 280.69,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-13",
+        "price": 295.79,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-14",
+        "price": 301.43,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-15",
+        "price": 292.66,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-16",
+        "price": 300.26,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-17",
+        "price": 309.65,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 313.31,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 314.8,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 310.92,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 305.26,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 302.5,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 304.93,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 298.88,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 301.32,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 311.71,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 312.9,
+        "label": "Daily close"
+      },
+      {
         "date": "2026-08-03",
+        "price": 307.54,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 308.73,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
         "price": 302.39,
-        "label": "Early Aug 2026 close",
-        "approx": true
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 302.99,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 298.31,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 268.0,
-    "latestPrice": 302.39,
-    "changePct": 12.83
+    "latestPrice": 298.31,
+    "changePct": 11.31
   },
   {
     "episode": 540,
@@ -137,9 +974,109 @@
         "label": "Entry"
       },
       {
+        "date": "2026-07-10",
+        "price": 55.08,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-13",
+        "price": 56.74,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-14",
+        "price": 56.95,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-15",
+        "price": 56.5,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-16",
+        "price": 57.02,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-17",
+        "price": 57.68,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 57.94,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 58.5,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 59.2,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 59.38,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 59.62,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 58.36,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 57.57,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 58.65,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 58.96,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 59.55,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 58.79,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 58.52,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 57.31,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 58.16,
+        "label": "Daily close"
+      },
+      {
         "date": "2026-08-07",
         "price": 57.5,
-        "label": "Aug 7, 2026 close"
+        "label": "Daily close"
       }
     ],
     "entryPrice": 55.25,
@@ -161,9 +1098,84 @@
         "label": "Entry"
       },
       {
-        "date": "2026-08-08",
+        "date": "2026-07-17",
+        "price": 262.6,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-20",
+        "price": 264.95,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-21",
+        "price": 262.59,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-22",
+        "price": 267.4,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-23",
+        "price": 271.99,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-24",
+        "price": 269.72,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 255.88,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 252.18,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 258.61,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 258.06,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 263.57,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 258.08,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 257.29,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 254.76,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 265.77,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
         "price": 256.14,
-        "label": "Aug 8, 2026 close"
+        "label": "Daily close"
       }
     ],
     "entryPrice": 255.83,
@@ -177,7 +1189,7 @@
     "dateRec": "2026-07-23",
     "structure": "Long GLD + put-spread collar: long Sep 18 $370 put ($8.50) / short Sep 18 $350 put ($3.50) / short Sep 18 $415 call ($3.25), $1.75 net cost",
     "thesis": "Gold, oil, and rates rising together may signal the market pricing in longer-term inflationary/fiscal consequences of prolonged war spending.",
-    "notes": "Approaching the $415 call cap; upside above $415 is forfeited under this structure. Downside protection band ($370\u2013$350) is well out of the money.",
+    "notes": "Approaching the $415 call cap; upside above $415 is forfeited under this structure. Downside protection band ($370–$350) is well out of the money.",
     "checkpoints": [
       {
         "date": "2026-07-23",
@@ -185,9 +1197,59 @@
         "label": "Entry"
       },
       {
+        "date": "2026-07-24",
+        "price": 371.9,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-27",
+        "price": 374.63,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-28",
+        "price": 369.37,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-29",
+        "price": 371.08,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 377.16,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-07-31",
+        "price": 371.54,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 371.71,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 374.16,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 389.64,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 389.67,
+        "label": "Daily close"
+      },
+      {
         "date": "2026-08-07",
         "price": 398.47,
-        "label": "Aug 7, 2026 close"
+        "label": "Daily close"
       }
     ],
     "entryPrice": 376.0,
@@ -200,7 +1262,7 @@
     "name": "iShares 20+ Year Treasury Bond ETF",
     "dateRec": "2026-07-30",
     "structure": "Bear put spread: long Aug 21 $82 put ($0.80) / short Aug 21 $80 put ($0.30), $0.50 net debit",
-    "thesis": "Inflation remains too persistent for the bond market to relax \u2014 either the Fed tightens or long yields do it for them.",
+    "thesis": "Inflation remains too persistent for the bond market to relax — either the Fed tightens or long yields do it for them.",
     "notes": "Max profit $1.50 (3-to-1) if TLT closes at/below $80 at expiration.",
     "checkpoints": [
       {
@@ -209,9 +1271,34 @@
         "label": "Entry"
       },
       {
-        "date": "2026-08-09",
+        "date": "2026-07-31",
+        "price": 82.25,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 82.19,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-04",
+        "price": 82.82,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-05",
+        "price": 83.0,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-06",
+        "price": 82.52,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-08-07",
         "price": 82.76,
-        "label": "Aug 9, 2026 close"
+        "label": "Daily close"
       }
     ],
     "entryPrice": 82.55,
@@ -233,13 +1320,13 @@
         "label": "Entry"
       },
       {
-        "date": "2026-08-10",
-        "price": 37.26,
-        "label": "Aug 10, 2026"
+        "date": "2026-08-07",
+        "price": 37.61,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 37.5,
-    "latestPrice": 37.26,
-    "changePct": -0.64
+    "latestPrice": 37.61,
+    "changePct": 0.29
   }
 ]
