@@ -1,48 +1,45 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MacroVoices Desk — Episode Log &amp; Trades of the Week</title>
-<meta name="description" content="A running log of MacroVoices podcast summaries and every Where's the Trade recommendation, tracked to the day." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css" />
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-</head>
-<body>
+# MacroVoices Desk
 
-<div class="tape-wrap" id="tape-wrap" aria-hidden="true">
-  <div class="tape" id="tape"></div>
-  <div class="tape" id="tape2"></div>
-</div>
+A static site: an episode log with full summaries, and a "Trades of the Week" tracker with an interactive performance chart.
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="#/episodes" class="brand">
-      <span class="brand-dial">MV</span>
-      <span class="brand-text">
-        <span class="brand-title">MacroVoices Desk</span>
-        <span class="brand-sub">Episode log &amp; trade tracker</span>
-      </span>
-    </a>
-    <nav class="main-nav">
-      <a href="#/episodes" data-route="episodes">Episodes</a>
-      <a href="#/trades" data-route="trades">Trades of the Week</a>
-    </nav>
-  </div>
-</header>
+## Deploy to Netlify
 
-<main id="app" class="app"></main>
+**Easiest — drag and drop:**
+1. Go to https://app.netlify.com/drop
+2. Drag this whole folder onto the page
+3. Done — you'll get a live URL immediately (you can rename it in Site settings → Domain management)
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <span>Sourced from MacroVoices podcast transcripts &amp; Big Picture Trading chart books.</span>
-    <span class="footer-disclaimer">For informational purposes only — not investment advice.</span>
-  </div>
-</footer>
+**Via Git (recommended for ongoing updates):**
+1. Push this folder to a GitHub/GitLab repo
+2. In Netlify: "Add new site" → "Import an existing project" → connect the repo
+3. Build command: leave blank. Publish directory: `.`
+4. Every push to the repo auto-deploys
 
-<script src="assets/app.js"></script>
-</body>
-</html>
+No build step is required — this is plain HTML/CSS/JS, so either method works with zero configuration.
+
+## Updating content
+
+All content lives in two JSON files under `data/`:
+
+- **`data/episodes.json`** — one object per episode (guest, date, interview summary, market desk summary, trade write-up). Add a new episode by appending a new object in the same shape.
+- **`data/trades.json`** — one object per trade, including a `checkpoints` array of `{date, price, label}` points used to draw the performance chart.
+
+### Adding a new episode + trade
+1. Add a new object to `episodes.json` following the existing pattern.
+2. Add a matching object to `trades.json` (same `episode` number) with at least an entry checkpoint. Add more checkpoints over time (e.g. weekly closes) to make the chart show real daily/weekly movement instead of a straight interpolated line.
+3. Re-deploy (if using drag-and-drop, just drag the folder again; if using Git, just push).
+
+### Important caveat on the performance chart
+The chart currently interpolates a straight line between whatever price checkpoints are in `trades.json` — it is **not** pulling live daily closes. Each trade only has the checkpoints that were confirmed in the source transcripts/chart books (usually just an entry price and one later spot-check). To get a true daily-close chart, either:
+- Manually add more `{date, price}` checkpoints to `trades.json` as you gather them, or
+- Wire up a client-side fetch to a market-data API (e.g. a paid endpoint with CORS support) inside `assets/app.js`'s `drawChart()` function, replacing the `checkpoints` array with real daily OHLC data at render time.
+
+## File structure
+```
+index.html          — shell page, loads app.js
+assets/style.css     — all styling
+assets/app.js        — router, rendering, Chart.js chart logic
+data/episodes.json   — episode content
+data/trades.json     — trade content + chart checkpoints
+netlify.toml         — Netlify config (no build step needed)
+```
