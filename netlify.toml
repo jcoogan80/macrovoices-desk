@@ -1,0 +1,245 @@
+[
+  {
+    "episode": 535,
+    "ticker": "PAVE",
+    "name": "Global X U.S. Infrastructure Development ETF",
+    "dateRec": "2026-06-04",
+    "structure": "Long PAVE shares + Jul 17 '26 $55 protective put (~$1.25)",
+    "thesis": "Position for a broader shift toward rebuilding the physical economy as infrastructure, supply chains, transportation, energy systems, and strategic manufacturing become central to economic statecraft.",
+    "notes": "Effective cost basis ~$58.49; floor $55.00 through Jul 17 '26 expiry; no covered call \u2014 full upside retained.",
+    "checkpoints": [
+      {
+        "date": "2026-06-04",
+        "price": 57.24,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-10",
+        "price": 58.99,
+        "label": "Latest known (date approximate)",
+        "approx": true
+      }
+    ],
+    "entryPrice": 57.24,
+    "latestPrice": 58.99,
+    "changePct": 3.06
+  },
+  {
+    "episode": 536,
+    "ticker": "XLV",
+    "name": "Health Care Select Sector SPDR ETF",
+    "dateRec": "2026-06-11",
+    "structure": "Long XLV shares + Aug '26 collar (buy $145 put ~$1.90 / sell $165 call ~$1.24, ~$0.66 net debit)",
+    "thesis": "Position for a rotation back into healthcare as crowded momentum and AI-related trades become vulnerable, while healthcare begins showing signs of accumulation and relative improvement.",
+    "notes": "Effective cost basis ~$153.51; floor $145, upside capped $165 \u2014 approaching but not yet at the cap.",
+    "checkpoints": [
+      {
+        "date": "2026-06-11",
+        "price": 152.85,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-07-30",
+        "price": 162.17,
+        "label": "Jul 30, 2026 close"
+      }
+    ],
+    "entryPrice": 152.85,
+    "latestPrice": 162.17,
+    "changePct": 6.1
+  },
+  {
+    "episode": 537,
+    "ticker": "DBA",
+    "name": "Invesco DB Agriculture Fund",
+    "dateRec": "2026-06-17",
+    "structure": "Bull call spread: long Jan 15 '27 $27 call ($1.70) / short Jan 15 '27 $30 call ($0.80), $0.90 net debit",
+    "thesis": "Building on Brent Johnson's delayed food-supply thesis; position for agricultural stress emerging into Q4 2026 and Q1 2027.",
+    "notes": "Better than 2:1 payoff ($2.10 max) if DBA \u2265 $30 at Jan 15 '27 expiry; max loss is the $0.90 debit; long-dated structure gives the thesis time to play out.",
+    "checkpoints": [
+      {
+        "date": "2026-06-17",
+        "price": 26.84,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-10",
+        "price": 27.7,
+        "label": "Latest known (date approximate)",
+        "approx": true
+      }
+    ],
+    "entryPrice": 26.84,
+    "latestPrice": 27.7,
+    "changePct": 3.2
+  },
+  {
+    "episode": 538,
+    "ticker": "UNL",
+    "name": "United States 12 Month Natural Gas Fund",
+    "dateRec": "2026-06-25",
+    "structure": "Long UNL \u2014 Delta-One, no options overlay",
+    "thesis": "AI power-demand bottleneck / natural gas as bridge fuel. Chosen over UNG to avoid front-month contango roll drag.",
+    "notes": "Simple buy-and-hold equity position, laddered exposure across the 12-month futures curve.",
+    "checkpoints": [
+      {
+        "date": "2026-06-25",
+        "price": 6.48,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-07-12",
+        "price": 6.055,
+        "label": "Jul 12, 2026 close"
+      }
+    ],
+    "entryPrice": 6.48,
+    "latestPrice": 6.055,
+    "changePct": -6.56
+  },
+  {
+    "episode": 539,
+    "ticker": "VLO",
+    "name": "Valero Energy",
+    "dateRec": "2026-07-02",
+    "structure": "Bull call spread: long Aug 21 $270 call ($15.00) / short Aug 21 $300 call ($5.75), $9.25 net debit",
+    "thesis": "Refiners directly benefit from strong crack spreads while crude itself remains sloppy/oversupplied \u2014 leaning into refiners rather than picking a bottom in crude.",
+    "notes": "Max payoff $20.75 (>2:1) if VLO \u2265 $300 at Aug 21 expiry; max loss is the $9.25 debit.",
+    "checkpoints": [
+      {
+        "date": "2026-07-02",
+        "price": 268.0,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-03",
+        "price": 302.39,
+        "label": "Early Aug 2026 close",
+        "approx": true
+      }
+    ],
+    "entryPrice": 268.0,
+    "latestPrice": 302.39,
+    "changePct": 12.83
+  },
+  {
+    "episode": 540,
+    "ticker": "XLE",
+    "name": "Energy Select Sector SPDR ETF",
+    "dateRec": "2026-07-09",
+    "structure": "Long XLE shares + Aug 21 '26 50/65 collar (buy $50 put ~$0.30 / sell $65 call ~$0.20, ~$0.10 net debit)",
+    "thesis": "Energy offers a way to stay constructive on equities without adding to already-crowded AI/tech exposure.",
+    "notes": "Hedge floor ~$50, upside capped ~$65; short call sits above 52-week high.",
+    "checkpoints": [
+      {
+        "date": "2026-07-09",
+        "price": 55.25,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 57.5,
+        "label": "Aug 7, 2026 close"
+      }
+    ],
+    "entryPrice": 55.25,
+    "latestPrice": 57.5,
+    "changePct": 4.07
+  },
+  {
+    "episode": 541,
+    "ticker": "LNG",
+    "name": "Cheniere Energy",
+    "dateRec": "2026-07-16",
+    "structure": "Long LNG shares + $240 protective put, 36 DTE (~$4.55)",
+    "thesis": "US LNG buildout tied to energy security and AI/data-center power demand.",
+    "notes": "Put hedge ~1.8% cost; technical failure/floor at $240.",
+    "checkpoints": [
+      {
+        "date": "2026-07-16",
+        "price": 255.83,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-08",
+        "price": 256.14,
+        "label": "Aug 8, 2026 close"
+      }
+    ],
+    "entryPrice": 255.83,
+    "latestPrice": 256.14,
+    "changePct": 0.12
+  },
+  {
+    "episode": 542,
+    "ticker": "GLD",
+    "name": "SPDR Gold Shares",
+    "dateRec": "2026-07-23",
+    "structure": "Long GLD + put-spread collar: long Sep 18 $370 put ($8.50) / short Sep 18 $350 put ($3.50) / short Sep 18 $415 call ($3.25), $1.75 net cost",
+    "thesis": "Gold, oil, and rates rising together may signal the market pricing in longer-term inflationary/fiscal consequences of prolonged war spending.",
+    "notes": "Approaching the $415 call cap; upside above $415 is forfeited under this structure. Downside protection band ($370\u2013$350) is well out of the money.",
+    "checkpoints": [
+      {
+        "date": "2026-07-23",
+        "price": 376.0,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-07",
+        "price": 398.47,
+        "label": "Aug 7, 2026 close"
+      }
+    ],
+    "entryPrice": 376.0,
+    "latestPrice": 398.47,
+    "changePct": 5.98
+  },
+  {
+    "episode": 543,
+    "ticker": "TLT",
+    "name": "iShares 20+ Year Treasury Bond ETF",
+    "dateRec": "2026-07-30",
+    "structure": "Bear put spread: long Aug 21 $82 put ($0.80) / short Aug 21 $80 put ($0.30), $0.50 net debit",
+    "thesis": "Inflation remains too persistent for the bond market to relax \u2014 either the Fed tightens or long yields do it for them.",
+    "notes": "Max profit $1.50 (3-to-1) if TLT closes at/below $80 at expiration.",
+    "checkpoints": [
+      {
+        "date": "2026-07-30",
+        "price": 82.55,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-09",
+        "price": 82.76,
+        "label": "Aug 9, 2026 close"
+      }
+    ],
+    "entryPrice": 82.55,
+    "latestPrice": 82.76,
+    "changePct": 0.25
+  },
+  {
+    "episode": 544,
+    "ticker": "BOTZ",
+    "name": "Global X Robotics & Artificial Intelligence ETF",
+    "dateRec": "2026-08-06",
+    "structure": "Long BOTZ shares + Aug $37 protective put (~$0.60, 16 DTE)",
+    "thesis": "Rotation out of crowded chip/infrastructure names into robotics & automation, a segment that already underwent a meaningful valuation reset.",
+    "notes": "Put expires ~Aug 22, 2026; stop/exit logic keyed to $37.",
+    "checkpoints": [
+      {
+        "date": "2026-08-06",
+        "price": 37.5,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-08-10",
+        "price": 37.26,
+        "label": "Aug 10, 2026"
+      }
+    ],
+    "entryPrice": 37.5,
+    "latestPrice": 37.26,
+    "changePct": -0.64
+  }
+]

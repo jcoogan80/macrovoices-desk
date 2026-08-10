@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MacroVoices Desk — Episode Log &amp; Trades of the Week</title>
+<meta name="description" content="A running log of MacroVoices podcast summaries and every Where's the Trade recommendation, tracked to the day." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="tape-wrap" id="tape-wrap" aria-hidden="true">
+  <div class="tape" id="tape"></div>
+  <div class="tape" id="tape2"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#/episodes" class="brand">
+      <span class="brand-dial">MV</span>
+      <span class="brand-text">
+        <span class="brand-title">MacroVoices Desk</span>
+        <span class="brand-sub">Episode log &amp; trade tracker</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="#/episodes" data-route="episodes">Episodes</a>
+      <a href="#/trades" data-route="trades">Trades of the Week</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app" class="app"></main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>Sourced from MacroVoices podcast transcripts &amp; Big Picture Trading chart books.</span>
+    <span class="footer-disclaimer">For informational purposes only — not investment advice.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
