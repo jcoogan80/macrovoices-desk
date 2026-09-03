@@ -2238,5 +2238,45 @@
     "entryPrice": 37.5,
     "latestPrice": 35.19,
     "changePct": -6.16
+  },
+  {
+    "episode": 545,
+    "ticker": "GLD",
+    "name": "SPDR Gold Shares",
+    "dateRec": "2026-08-13",
+    "structure": "Bull call spread: long Oct 16 '26 $410 call ($15.00) / short Oct 16 '26 $450 call ($4.50), $10.50 net debit",
+    "direction": "long",
+    "thesis": "Building on Michael Howell's structurally bullish but tactically-inflecting gold view — using gold's steep right-tail volatility skew to finance a defined-risk bullish structure targeting the next leg higher.",
+    "notes": "Near 3-to-1 payoff (risk ~$10.50 to make ~$30) if GLD is at/above $450 at Oct 16 '26 expiry.",
+    "checkpoints": [
+      {
+        "date": "2026-08-13",
+        "price": 405.0,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 405.0,
+    "latestPrice": 405.0,
+    "changePct": 0.0
+  },
+  {
+    "episode": 546,
+    "ticker": "IBIT",
+    "name": "iShares Bitcoin Trust",
+    "dateRec": "2026-08-20",
+    "structure": "Deep in-the-money call (stock-replacement): long Jan 15 '27 $32 call for $8.75 (≈$7.00 intrinsic, ≈$1.75 time value)",
+    "direction": "long",
+    "thesis": "Building on Darius Dale's fiscal-dominance/financial-repression framework — scarce assets benefit structurally from continued debasement, with Bitcoin as a direct expression of that thesis.",
+    "notes": "Capital-efficient stock-replacement alternative to owning IBIT outright; max loss = premium paid; delta rises toward 1 as IBIT rallies.",
+    "checkpoints": [
+      {
+        "date": "2026-08-20",
+        "price": 39.0,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 39.0,
+    "latestPrice": 39.0,
+    "changePct": 0.0
   }
 ]
