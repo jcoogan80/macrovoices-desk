@@ -59,11 +59,61 @@ function tradeForEpisode(epNum) {
   return TRADES.find(t => t.episode === epNum);
 }
 
+// ---------- trade lifecycle (open/closed) & payoff-based P&L ----------
+// payoff(), isTradeClosed(), checkpointOnOrBefore(), daysUntil() come from assets/payoff.js.
+function todayISODate() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function tradeMetrics(t) {
+  const todayISO = todayISODate();
+  const closed = isTradeClosed(t, todayISO);
+
+  if (!closed) {
+    let closesLabel = null;
+    if (t.expirationDate) {
+      const n = daysUntil(t.expirationDate, todayISO);
+      closesLabel = n <= 0
+        ? 'Closes today'
+        : `Closes in ${n} day${n === 1 ? '' : 's'} (${fmtDate(t.expirationDate)})`;
+    }
+    return {
+      closed: false,
+      pct: t.changePct,
+      pctSuffix: 'since entry',
+      closesLabel,
+      chartCheckpoints: t.checkpoints,
+    };
+  }
+
+  const atExpiry = checkpointOnOrBefore(t.checkpoints, t.expirationDate) || t.checkpoints[t.checkpoints.length - 1];
+  const finalPnL = payoff(t.legs, t.netCostBasis, atExpiry.price);
+  const finalPnLPct = (finalPnL / t.netCostBasis) * 100;
+  const chartCheckpoints = t.checkpoints.filter(c => c.date <= t.expirationDate);
+
+  return {
+    closed: true,
+    pct: finalPnLPct,
+    pctSuffix: 'final P&L',
+    closesLabel: null,
+    chartCheckpoints,
+    finalPnL,
+    finalPnLPct,
+    atExpiry,
+  };
+}
+
+function statusBadge(closed) {
+  return `<span class="status-badge ${closed ? 'closed' : 'open'}">${closed ? 'Closed' : 'Open'}</span>`;
+}
+
 // ---------- ticker tape ----------
 function renderTape() {
   const items = TRADES.map(t => {
-    const cls = pctClass(t.changePct);
-    return `<span class="tape-item"><span class="tk">${t.ticker}</span><span class="val ${cls}">${pctStr(t.changePct)}</span></span>`;
+    const m = tradeMetrics(t);
+    const cls = pctClass(m.pct);
+    return `<span class="tape-item"><span class="tk">${t.ticker}</span><span class="val ${cls}">${pctStr(m.pct)}</span></span>`;
   }).join('');
   document.getElementById('tape').innerHTML = items;
   document.getElementById('tape2').innerHTML = items;
@@ -73,8 +123,9 @@ function renderTape() {
 function viewEpisodeList() {
   const rows = EPISODES.map(ep => {
     const trade = tradeForEpisode(ep.episode);
+    const m = trade ? tradeMetrics(trade) : null;
     const chip = trade
-      ? `<span class="ep-trade-chip"><span class="tk">${trade.ticker}</span> <span class="${pctClass(trade.changePct)}" style="color:inherit">${pctStr(trade.changePct)}</span></span>`
+      ? `<span class="ep-trade-chip"><span class="tk">${trade.ticker}</span> <span class="${pctClass(m.pct)}" style="color:inherit">${pctStr(m.pct)}</span></span>`
       : `<span class="ep-trade-chip">no trade logged</span>`;
     return `
       <a class="ep-row" href="#/episode/${ep.episode}">
@@ -103,12 +154,15 @@ function viewEpisodeDetail(epNum) {
   if (!ep) return `<p>Episode not found.</p>`;
   const trade = tradeForEpisode(epNum);
 
+  const m = trade ? tradeMetrics(trade) : null;
   const tradeCardHtml = trade ? `
     <div class="card trade-card">
       <span class="card-label">Where's the trade</span>
       <div class="trade-ticker-line">
         <span class="trade-ticker-badge">${trade.ticker}</span>
-        <span class="trade-change ${pctClass(trade.changePct)}">${pctStr(trade.changePct)} since entry</span>
+        ${statusBadge(m.closed)}
+        <span class="trade-change ${pctClass(m.pct)}">${pctStr(m.pct)} ${m.pctSuffix}</span>
+        ${m.closesLabel ? `<span class="trade-closes-label">${m.closesLabel}</span>` : ''}
         <a href="#/trades" style="margin-left:auto; font-family: var(--mono); font-size: 12.5px; color: var(--ink-dim);">View on trade tracker →</a>
       </div>
       ${renderBody(ep.tradeBody)}
@@ -150,25 +204,32 @@ let selectedTicker = null;
 function viewTrades() {
   selectedTicker = selectedTicker || TRADES[0].ticker;
 
-  const stats = TRADES.map(t => `
+  const stats = TRADES.map(t => {
+    const m = tradeMetrics(t);
+    return `
     <div class="mini-stat ${t.ticker === selectedTicker ? 'selected' : ''}" data-ticker="${t.ticker}" tabindex="0" role="button">
       <span class="tk">${t.ticker}</span>
-      <span class="chg ${pctClass(t.changePct)}">${pctStr(t.changePct)}</span>
+      <span class="chg ${pctClass(m.pct)}">${pctStr(m.pct)}</span>
       <span class="ep">EP ${t.episode}</span>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
-  const tableRows = TRADES.map(t => `
+  const tableRows = TRADES.map(t => {
+    const m = tradeMetrics(t);
+    return `
     <tr>
       <td class="tk-cell">${t.ticker}<br><span style="font-weight:400;color:var(--ink-faint);font-size:12px;">${t.name}</span></td>
       <td><a class="ep-link" href="#/episode/${t.episode}">EP ${t.episode} →</a></td>
+      <td>${statusBadge(m.closed)}</td>
       <td class="num-cell">${fmtDate(t.dateRec)}</td>
       <td class="num-cell">$${t.entryPrice.toFixed(2)}</td>
       <td class="num-cell">$${t.latestPrice.toFixed(2)}</td>
-      <td class="chg-cell ${pctClass(t.changePct)}">${pctStr(t.changePct)}</td>
+      <td class="chg-cell ${pctClass(m.pct)}" title="${m.closed ? 'Final P&L' : 'Change since entry'}">${pctStr(m.pct)}</td>
       <td class="structure-cell">${t.structure}</td>
     </tr>
-  `).join('');
+  `;
+  }).join('');
 
   return `
     <div class="page-head">
@@ -182,8 +243,12 @@ function viewTrades() {
     <div class="chart-panel">
       <div class="chart-panel-head">
         <div>
-          <div class="chart-panel-title" id="chart-title"></div>
+          <div class="chart-panel-title-row">
+            <span class="chart-panel-title" id="chart-title"></span>
+            <span id="chart-status-badge"></span>
+          </div>
           <div class="chart-panel-sub" id="chart-sub"></div>
+          <div class="chart-panel-closes" id="chart-closes"></div>
         </div>
         <div class="chart-panel-stat">
           <div class="big" id="chart-big"></div>
@@ -199,7 +264,7 @@ function viewTrades() {
         <table class="trade-table">
           <thead>
             <tr>
-              <th>Ticker</th><th>Episode</th><th>Entry date</th><th>Entry</th><th>Latest</th><th>Change</th><th>Structure</th>
+              <th>Ticker</th><th>Episode</th><th>Status</th><th>Entry date</th><th>Entry</th><th>Latest</th><th>Change</th><th>Structure</th>
             </tr>
           </thead>
           <tbody>${tableRows}</tbody>
@@ -212,28 +277,36 @@ function viewTrades() {
 function drawChart() {
   const t = TRADES.find(x => x.ticker === selectedTicker);
   if (!t) return;
+  const m = tradeMetrics(t);
 
   document.getElementById('chart-title').textContent = `${t.ticker} — ${t.name}`;
   document.getElementById('chart-sub').textContent = `${t.structure}`;
+  document.getElementById('chart-status-badge').innerHTML = statusBadge(m.closed);
+  document.getElementById('chart-closes').textContent = m.closesLabel || '';
+
   const big = document.getElementById('chart-big');
-  big.textContent = pctStr(t.changePct);
-  big.className = 'big ' + pctClass(t.changePct);
-  document.getElementById('chart-small').textContent =
-    `$${t.entryPrice.toFixed(2)} → $${t.latestPrice.toFixed(2)}`;
+  big.textContent = pctStr(m.pct);
+  big.className = 'big ' + pctClass(m.pct);
+  document.getElementById('chart-small').textContent = m.closed
+    ? `$${m.finalPnL >= 0 ? '+' : ''}${m.finalPnL.toFixed(2)} at expiry ($${m.atExpiry.price.toFixed(2)} on ${fmtDate(t.expirationDate)})`
+    : `$${t.entryPrice.toFixed(2)} → $${t.latestPrice.toFixed(2)}`;
 
-  const dailyCount = t.checkpoints.length - 1;   // checkpoints[0] is Entry
-  document.getElementById('chart-note').textContent =
-    `Plotted from the entry price plus ${dailyCount} daily close${dailyCount === 1 ? '' : 's'} ` +
-    `(unadjusted end-of-day series).` +
-    (t.direction === 'short'
-      ? ' Bearish thesis — change is signed so a falling underlying reads as positive.'
-      : '') +
-    ` Change is the underlying's signed move, not position P&L — collars are capped and debit ` +
-    `spreads don't track the underlying dollar-for-dollar, especially near strikes.`;
+  const dailyCount = m.chartCheckpoints.length - 1;   // checkpoints[0] is Entry
+  document.getElementById('chart-note').textContent = m.closed
+    ? `Closed at expiration (${fmtDate(t.expirationDate)}). Final P&L is the real options payoff of the ` +
+      `full structure (net of premiums/entry cost) at the underlying's price nearest expiry — not the ` +
+      `underlying's raw % move. Chart is capped at expiration; ${dailyCount} daily close${dailyCount === 1 ? '' : 's'} shown.`
+    : `Plotted from the entry price plus ${dailyCount} daily close${dailyCount === 1 ? '' : 's'} ` +
+      `(unadjusted end-of-day series).` +
+      (t.direction === 'short'
+        ? ' Bearish thesis — change is signed so a falling underlying reads as positive.'
+        : '') +
+      ` Change is the underlying's signed move, not position P&L — collars are capped and debit ` +
+      `spreads don't track the underlying dollar-for-dollar, especially near strikes.`;
 
-  const labels = t.checkpoints.map(c => fmtDate(c.date));
-  const data = t.checkpoints.map(c => c.price);
-  const isUp = t.changePct >= 0;
+  const labels = m.chartCheckpoints.map(c => fmtDate(c.date));
+  const data = m.chartCheckpoints.map(c => c.price);
+  const isUp = m.pct >= 0;
   const lineColor = isUp ? '#3ecf8e' : '#f0655a';
 
   const canvas = document.getElementById('perf-chart');
@@ -269,7 +342,7 @@ function drawChart() {
           titleFont: { family: 'IBM Plex Mono' },
           bodyFont: { family: 'IBM Plex Mono' },
           callbacks: {
-            label: (ctx) => `$${ctx.parsed.y.toFixed(2)}  (${t.checkpoints[ctx.dataIndex].label})`
+            label: (ctx) => `$${ctx.parsed.y.toFixed(2)}  (${m.chartCheckpoints[ctx.dataIndex].label})`
           }
         }
       },

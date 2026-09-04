@@ -8,6 +8,21 @@
     "direction": "long",
     "thesis": "Position for a broader shift toward rebuilding the physical economy as infrastructure, supply chains, transportation, energy systems, and strategic manufacturing become central to economic statecraft.",
     "notes": "Effective cost basis ~$58.49; floor $55.00 through Jul 17 '26 expiry; no covered call — full upside retained.",
+    "expirationDate": "2026-07-17",
+    "netCostBasis": 58.49,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 57.24
+      },
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 55,
+        "premium": 1.25
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-06-04",
@@ -343,6 +358,27 @@
     "direction": "long",
     "thesis": "Position for a rotation back into healthcare as crowded momentum and AI-related trades become vulnerable, while healthcare begins showing signs of accumulation and relative improvement.",
     "notes": "Effective cost basis ~$153.51; floor $145, upside capped $165 — approaching but not yet at the cap.",
+    "expirationDate": "2026-08-21",
+    "netCostBasis": 153.51,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 152.85
+      },
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 145,
+        "premium": 1.9
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 165,
+        "premium": 1.24
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-06-11",
@@ -653,6 +689,22 @@
     "direction": "long",
     "thesis": "Building on Brent Johnson's delayed food-supply thesis; position for agricultural stress emerging into Q4 2026 and Q1 2027.",
     "notes": "Better than 2:1 payoff ($2.10 max) if DBA ≥ $30 at Jan 15 '27 expiry; max loss is the $0.90 debit; long-dated structure gives the thesis time to play out.",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 0.9,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 27,
+        "premium": 1.7
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 30,
+        "premium": 0.8
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-06-17",
@@ -943,6 +995,15 @@
     "direction": "long",
     "thesis": "AI power-demand bottleneck / natural gas as bridge fuel. Chosen over UNG to avoid front-month contango roll drag.",
     "notes": "Simple buy-and-hold equity position, laddered exposure across the 12-month futures curve.",
+    "expirationDate": null,
+    "netCostBasis": 6.48,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 6.48
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-06-25",
@@ -1208,6 +1269,22 @@
     "direction": "long",
     "thesis": "Refiners directly benefit from strong crack spreads while crude itself remains sloppy/oversupplied — leaning into refiners rather than picking a bottom in crude.",
     "notes": "Max payoff $20.75 (>2:1) if VLO ≥ $300 at Aug 21 expiry; max loss is the $9.25 debit.",
+    "expirationDate": "2026-08-21",
+    "netCostBasis": 9.25,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 270,
+        "premium": 15.0
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 300,
+        "premium": 5.75
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-07-02",
@@ -1448,6 +1525,27 @@
     "direction": "long",
     "thesis": "Energy offers a way to stay constructive on equities without adding to already-crowded AI/tech exposure.",
     "notes": "Hedge floor ~$50, upside capped ~$65; short call sits above 52-week high.",
+    "expirationDate": "2026-08-21",
+    "netCostBasis": 55.35,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 55.25
+      },
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 50,
+        "premium": 0.3
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 65,
+        "premium": 0.2
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-07-09",
@@ -1668,6 +1766,21 @@
     "direction": "long",
     "thesis": "US LNG buildout tied to energy security and AI/data-center power demand.",
     "notes": "Put hedge ~1.8% cost; technical failure/floor at $240.",
+    "expirationDate": "2026-08-21",
+    "netCostBasis": 260.38,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 255.83
+      },
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 240,
+        "premium": 4.55
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-07-16",
@@ -1863,6 +1976,28 @@
     "direction": "long",
     "thesis": "Gold, oil, and rates rising together may signal the market pricing in longer-term inflationary/fiscal consequences of prolonged war spending.",
     "notes": "Approaching the $415 call cap; upside above $415 is forfeited under this structure. Downside protection band ($370–$350) is well out of the money.",
+    "expirationDate": "2026-09-18",
+    "netCostBasis": 1.75,
+    "legs": [
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 370,
+        "premium": 8.5
+      },
+      {
+        "type": "put",
+        "side": "short",
+        "strike": 350,
+        "premium": 3.5
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 415,
+        "premium": 3.25
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-07-23",
@@ -2033,6 +2168,22 @@
     "direction": "short",
     "thesis": "Inflation remains too persistent for the bond market to relax — either the Fed tightens or long yields do it for them.",
     "notes": "Max profit $1.50 (3-to-1) if TLT closes at/below $80 at expiration.",
+    "expirationDate": "2026-08-21",
+    "netCostBasis": 0.5,
+    "legs": [
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 82,
+        "premium": 0.8
+      },
+      {
+        "type": "put",
+        "side": "short",
+        "strike": 80,
+        "premium": 0.3
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-07-30",
@@ -2178,6 +2329,21 @@
     "direction": "long",
     "thesis": "Rotation out of crowded chip/infrastructure names into robotics & automation, a segment that already underwent a meaningful valuation reset.",
     "notes": "Put expires ~Aug 22, 2026; stop/exit logic keyed to $37.",
+    "expirationDate": "2026-08-22",
+    "netCostBasis": 38.1,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 37.5
+      },
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 37,
+        "premium": 0.6
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-08-06",
@@ -2298,6 +2464,22 @@
     "direction": "long",
     "thesis": "Building on Michael Howell's structurally bullish but tactically-inflecting gold view — using gold's steep right-tail volatility skew to finance a defined-risk bullish structure targeting the next leg higher.",
     "notes": "Near 3-to-1 payoff (risk ~$10.50 to make ~$30) if GLD is at/above $450 at Oct 16 '26 expiry.",
+    "expirationDate": "2026-10-16",
+    "netCostBasis": 10.5,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 410,
+        "premium": 15.0
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 450,
+        "premium": 4.5
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-08-13",
@@ -2393,6 +2575,16 @@
     "direction": "long",
     "thesis": "Building on Darius Dale's fiscal-dominance/financial-repression framework — scarce assets benefit structurally from continued debasement, with Bitcoin as a direct expression of that thesis.",
     "notes": "Capital-efficient stock-replacement alternative to owning IBIT outright; max loss = premium paid; delta rises toward 1 as IBIT rallies.",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 8.75,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 32,
+        "premium": 8.75
+      }
+    ],
     "checkpoints": [
       {
         "date": "2026-08-20",

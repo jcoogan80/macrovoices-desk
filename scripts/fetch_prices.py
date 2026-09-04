@@ -20,6 +20,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -48,22 +49,44 @@ def resolve_key(key_file):
     )
 
 
-def tickers_from_trades(trades_path):
-    """Unique tickers in trades.json, first-seen order."""
+def is_closed(trade, today_iso):
+    """A trade is closed once today has reached its expirationDate. Trades
+    with no expirationDate (e.g. delta-one positions) never count as closed."""
+    exp = trade.get("expirationDate")
+    return bool(exp) and today_iso >= exp
+
+
+def tickers_from_trades(trades_path, today_iso=None):
+    """Unique tickers in trades.json, first-seen order, skipping any ticker
+    whose every associated trade is closed - there is nothing left to track."""
+    today_iso = today_iso or date.today().isoformat()
     try:
         trades = json.loads(Path(trades_path).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         sys.exit(f"cannot read tickers from {trades_path}: {exc}")
-    seen, out = set(), []
+
+    by_ticker = {}
+    order = []
     for t in trades:
         tk = t.get("ticker")
         if not tk:
             sys.exit(f"trade for episode {t.get('episode')!r} has no ticker")
-        if tk not in seen:
-            seen.add(tk)
+        if tk not in by_ticker:
+            by_ticker[tk] = []
+            order.append(tk)
+        by_ticker[tk].append(t)
+
+    out, skipped = [], []
+    for tk in order:
+        if all(is_closed(t, today_iso) for t in by_ticker[tk]):
+            skipped.append(tk)
+        else:
             out.append(tk)
+
+    if skipped:
+        print(f"skipping {len(skipped)} ticker(s) with all trades closed: {', '.join(skipped)}")
     if not out:
-        sys.exit(f"no tickers found in {trades_path}")
+        sys.exit(f"no open tickers found in {trades_path}")
     return out
 
 

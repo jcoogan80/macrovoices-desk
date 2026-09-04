@@ -9,6 +9,9 @@ underlying price data has not changed. That is what lets the GitHub Action
 use `git diff --quiet` to decide whether there is anything to commit.
 
 Behaviour:
+  - a trade whose expirationDate has passed is closed; its checkpoints are
+    left untouched (no new daily closes appended) and it does not require a
+    price CSV to be present
   - the existing "Entry" checkpoint is preserved byte-for-byte
   - every other pre-existing checkpoint is dropped; all fall inside the
     daily-data window, so keeping them would duplicate dates
@@ -39,6 +42,13 @@ DEFAULT_PRICES = REPO_ROOT / ".price-cache"
 
 SHORT_EPISODES = {543}          # 543 = TLT bear put spread (bearish thesis)
 DIRECTION_AFTER = "structure"   # key order: direction sits next to structure
+
+
+def is_closed(trade, today_iso):
+    """A trade is closed once today has reached its expirationDate. Trades
+    with no expirationDate (e.g. delta-one positions) never count as closed."""
+    exp = trade.get("expirationDate")
+    return bool(exp) and today_iso >= exp
 
 
 def signed_change_pct(direction, entry_price, latest):
@@ -99,6 +109,10 @@ def main():
     for t in trades:
         tk = t["ticker"]
         cps = t.get("checkpoints") or []
+
+        if is_closed(t, args.today):
+            report.append(f"  {tk:<5} closed (expired {t['expirationDate']}) - skipped, checkpoints untouched")
+            continue
 
         entry = next((c for c in cps if c.get("label") == "Entry"), None)
         if entry is None:
