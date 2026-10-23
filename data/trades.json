@@ -1145,11 +1145,16 @@
         "date": "2026-10-21",
         "price": 28.12,
         "label": "Daily close"
+      },
+      {
+        "date": "2026-10-22",
+        "price": 27.92,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 26.84,
-    "latestPrice": 28.12,
-    "changePct": 4.77
+    "latestPrice": 27.92,
+    "changePct": 4.02
   },
   {
     "episode": 538,
@@ -1584,11 +1589,16 @@
         "date": "2026-10-21",
         "price": 5.42,
         "label": "Daily close"
+      },
+      {
+        "date": "2026-10-22",
+        "price": 5.38,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 6.48,
-    "latestPrice": 5.42,
-    "changePct": -16.36
+    "latestPrice": 5.38,
+    "changePct": -16.98
   },
   {
     "episode": 539,
@@ -3315,10 +3325,15 @@
         "date": "2026-10-21",
         "price": 47.84,
         "label": "Daily close"
+      },
+      {
+        "date": "2026-10-22",
+        "price": 46.06,
+        "label": "Daily close"
       }
     ],
     "entryPrice": 39.0,
-    "latestPrice": 47.84,
-    "changePct": 22.67
+    "latestPrice": 46.06,
+    "changePct": 18.1
   }
 ]
