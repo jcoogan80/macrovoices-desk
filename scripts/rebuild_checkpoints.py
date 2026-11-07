@@ -18,8 +18,9 @@ Behaviour:
   - one {"date","price","label":"Daily close"} appended per trading day, in
     chronological order, for dates strictly after the entry date
   - latestPrice = price of most recent checkpoint
-  - direction   = "short" for bearish theses (episode 543, TLT bear put
-                  spread), "long" otherwise
+  - direction   = taken from the trade's own "direction" field ("short" for
+                  bearish structures); legacy fallback: episode 543 short,
+                  everything else long
   - changePct   = signed by direction, 2dp:
                     long  -> (latestPrice - entryPrice) / entryPrice * 100
                     short -> (entryPrice - latestPrice) / entryPrice * 100
@@ -151,7 +152,10 @@ def main():
         entry_price = t["entryPrice"]           # untouched
         latest = t["checkpoints"][-1]["price"]
         t["latestPrice"] = latest
-        t["direction"] = "short" if t["episode"] in SHORT_EPISODES else "long"
+        # Respect an explicit direction on the trade (bearish structures such as
+        # bear put spreads / long puts set "short"); fall back to the legacy set.
+        t["direction"] = t.get("direction") or (
+            "short" if t["episode"] in SHORT_EPISODES else "long")
         t["changePct"] = signed_change_pct(t["direction"], entry_price, latest)
 
         raw_move = round((latest - entry_price) / entry_price * 100, 2)

@@ -3500,5 +3500,408 @@
     "entryPrice": 39.0,
     "latestPrice": 42.88,
     "changePct": 9.95
+  },
+  {
+    "episode": 549,
+    "ticker": "NVDA",
+    "name": "NVIDIA Corp.",
+    "dateRec": "2026-09-10",
+    "structure": "Long at-the-money call: buy Jan 15 '27 $225 call for ~$21.60 (IV ~38%, near 1-yr lows)",
+    "direction": "long",
+    "thesis": "Building on Matt Barrie's accelerating-agentic-AI thesis: structurally bullish AI, but not a clean tactical entry, so buy cheap long-dated optionality instead of the shares.",
+    "notes": "Defined risk (max loss = premium), positive vega if NVDA corrects into the midterms, open-ended upside if semis re-accelerate. 128 days to expiry at entry.",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 21.6,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 225,
+        "premium": 21.6
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-09-10",
+        "price": 224.31,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 224.31,
+    "latestPrice": 224.31,
+    "changePct": 0.0
+  },
+  {
+    "episode": 550,
+    "ticker": "TLT",
+    "name": "iShares 20+ Year Treasury Bond ETF",
+    "dateRec": "2026-09-17",
+    "structure": "Long strangle: buy Jan 15 '27 $85 call (~$0.82) + $77 put (~$0.97) = $1.79 debit",
+    "direction": "long",
+    "thesis": "Building on Harley Bassman's trust/fiscal-credibility and mortgage-convexity concerns: own bond volatility in either direction rather than picking a direction on yields.",
+    "notes": "NON-DIRECTIONAL: changePct (underlying move) is not meaningful here; the trade profits from a large move either way (~7% to break even at expiry) or a rise in implied vol. Final P&L uses the real two-leg payoff.",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 1.79,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 85,
+        "premium": 0.82
+      },
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 77,
+        "premium": 0.97
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-09-17",
+        "price": 81.27,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 81.27,
+    "latestPrice": 81.27,
+    "changePct": 0.0
+  },
+  {
+    "episode": 551,
+    "ticker": "USO",
+    "name": "United States Oil Fund",
+    "dateRec": "2026-09-24",
+    "structure": "Bull call spread: long Jan 15 '27 $150 call ($15.50) / short $180 call ($7.25), $8.25 net debit",
+    "direction": "long",
+    "thesis": "Building on Michael Every's view that low oil prices don't mean geopolitical risk has gone; another pipeline/export-route disruption could quickly reverse the relief move.",
+    "notes": "~3:1 reward/risk; $180 on USO is roughly crude at ~$120/bbl. Max loss = premium if USO <= $150 at expiry.",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 8.25,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 150,
+        "premium": 15.5
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 180,
+        "premium": 7.25
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-09-24",
+        "price": 148.3,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 148.3,
+    "latestPrice": 148.3,
+    "changePct": 0.0
+  },
+  {
+    "episode": 552,
+    "ticker": "SPY",
+    "name": "S&P 500 (SPX put, tracked via SPY proxy)",
+    "dateRec": "2026-10-01",
+    "structure": "Long OTM put: buy Jan 14 '27 SPX 7430 put for ~136 index points (~30 delta, ~1.8% of notional), SPX ~7,653",
+    "direction": "short",
+    "thesis": "Building on David Rosenberg's view that the energy shock damages growth more than it creates lasting inflation; cheap 3-month vol ahead of a consequential Q4 (earnings, two FOMCs, midterms, Hormuz).",
+    "notes": "Actual trade is on the SPX index, which the price source doesn't carry, so it's tracked via SPY. Legs are scaled to SPY terms by the entry-day SPY/SPX ratio (0.09983): strike ~741.73, premium ~13.58. Expiry breakeven ~7,294 SPX (~4.7% below reference).",
+    "expirationDate": "2027-01-14",
+    "netCostBasis": 13.58,
+    "legs": [
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 741.73,
+        "premium": 13.58
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-10-01",
+        "price": 763.99,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 763.99,
+    "latestPrice": 763.99,
+    "changePct": 0.0
+  },
+  {
+    "episode": 553,
+    "ticker": "CADUSD",
+    "name": "Canadian dollar (CAD futures put)",
+    "dateRec": "2026-10-07",
+    "structure": "Long put on Canadian dollar futures: buy Nov 6 '26 70.00 US-cent put for 22 pips (~$220/contract), CAD ~70.37",
+    "direction": "short",
+    "thesis": "Building on Brent Johnson's dollar-milkshake view and his specific preference for USD over CAD: the dollar keeps attracting capital as higher rates hit more vulnerable economies harder.",
+    "notes": "Prices are in US cents per CAD. Daily closes are CAD/USD spot (x100), backfilled manually because the price pipeline doesn't track FX and skips expired trades. Futures traded slightly above spot (carry). RESULT: expired Nov 6 with spot ~70.78, above the 70 strike, so the put expired worthless (-22 pips, -100% of premium).",
+    "expirationDate": "2026-11-06",
+    "netCostBasis": 0.22,
+    "legs": [
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 70.0,
+        "premium": 0.22
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-10-07",
+        "price": 70.37,
+        "label": "Entry"
+      },
+      {
+        "date": "2026-10-08",
+        "price": 70.3,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-09",
+        "price": 70.16,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-12",
+        "price": 70.02,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-13",
+        "price": 70.35,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-14",
+        "price": 70.24,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-15",
+        "price": 70.51,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-16",
+        "price": 70.74,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-19",
+        "price": 70.87,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-20",
+        "price": 71.15,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-21",
+        "price": 71.2,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-22",
+        "price": 71.39,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-23",
+        "price": 71.41,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-26",
+        "price": 71.37,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-27",
+        "price": 71.18,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-28",
+        "price": 71.46,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-29",
+        "price": 71.49,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-10-30",
+        "price": 71.57,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-11-02",
+        "price": 71.5,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-11-03",
+        "price": 71.38,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-11-04",
+        "price": 71.55,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-11-05",
+        "price": 71.35,
+        "label": "Daily close"
+      },
+      {
+        "date": "2026-11-06",
+        "price": 70.78,
+        "label": "Daily close"
+      }
+    ],
+    "entryPrice": 70.37,
+    "latestPrice": 70.78,
+    "changePct": -0.58
+  },
+  {
+    "episode": 554,
+    "ticker": "LEU",
+    "name": "Centrus Energy Corp.",
+    "dateRec": "2026-10-15",
+    "structure": "Cash-secured short LEAPS put: sell Jan 21 '28 $70 put for ~$10.25 ($1,025/contract), strike ~43% below spot",
+    "direction": "long",
+    "thesis": "Building on Yasir Arafat's point that reactor mass-production only scales if enriched-fuel supply scales with it; Centrus is the US domestic enrichment play. Get paid to commit to owning it far below today's price.",
+    "notes": "netCostBasis is set to the $70 strike (the cash-secured obligation), so final P&L % = return on capital at risk: +14.6% if it expires above $70. If assigned, effective cost is ~$59.75/share. Max profit = premium.",
+    "expirationDate": "2028-01-21",
+    "netCostBasis": 70.0,
+    "legs": [
+      {
+        "type": "put",
+        "side": "short",
+        "strike": 70,
+        "premium": 10.25
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-10-15",
+        "price": 122.0,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 122.0,
+    "latestPrice": 122.0,
+    "changePct": 0.0
+  },
+  {
+    "episode": 555,
+    "ticker": "JPM",
+    "name": "JPMorgan Chase (long leg of JPM/DB pair)",
+    "dateRec": "2026-10-22",
+    "structure": "Equal-dollar pair: long JPM ~$334.58 / short Deutsche Bank (DB) ~$32.39 (~10.3 DB shares short per JPM share); optional hedge: long Apr 16 '27 DB $36 call ~$2.00 per 100 DB short",
+    "direction": "long",
+    "thesis": "Building on Louis-Vincent Gave's France thesis: French fiscal/energy stress could spread through Europe's banks. European financials (EUFN +57% since the Liberation Day lows) have more than doubled US financials (XLF +27%), so there's room for that leadership to reverse.",
+    "notes": "PAIR TRADE: the site tracks only the JPM leg (single-ticker limitation). Pair P&L = JPM % change minus DB % change; DB entry $32.39 (tracked manually in the local Trade Tracker). The DB call overlay caps the DB-leg loss at ~$5.61/share.",
+    "expirationDate": null,
+    "netCostBasis": 334.58,
+    "legs": [
+      {
+        "type": "stock",
+        "side": "long",
+        "entryPrice": 334.58
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-10-22",
+        "price": 334.58,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 334.58,
+    "latestPrice": 334.58,
+    "changePct": 0.0
+  },
+  {
+    "episode": 556,
+    "ticker": "COF",
+    "name": "Capital One Financial",
+    "dateRec": "2026-10-29",
+    "structure": "Bear put spread: long Jan 15 '27 $200 put / short $175 put, ~$5.96 net debit (alt: long $200 put outright ~$7.95)",
+    "direction": "short",
+    "thesis": "Building on Luke Gromen's AI-unemployment consumer-credit thesis: if AI erodes workers' earning power, consumer lenders' credit quality deteriorates. COF (cards + auto) has been in a downtrend since January and is pivoting at its 50-day.",
+    "notes": "Max profit ~$19.04 vs. $5.96 risked (~3.2:1). Individual leg premiums are inferred: $200 put ~$7.95 (quoted), so the $175 put is ~$1.99.",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 5.96,
+    "legs": [
+      {
+        "type": "put",
+        "side": "long",
+        "strike": 200,
+        "premium": 7.95
+      },
+      {
+        "type": "put",
+        "side": "short",
+        "strike": 175,
+        "premium": 1.99
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-10-29",
+        "price": 204.88,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 204.88,
+    "latestPrice": 204.88,
+    "changePct": 0.0
+  },
+  {
+    "episode": 557,
+    "ticker": "MPC",
+    "name": "Marathon Petroleum Corp.",
+    "dateRec": "2026-11-05",
+    "structure": "Bull call spread: long Dec 18 '26 $390 call (~$30) / short $450 call (~$10), $20 net debit",
+    "direction": "long",
+    "thesis": "Building on Michael Every's view that markets are too quick to price lasting energy relief: continued refinery attacks keep refining capacity tight and margins strong. MPC fell ~23% in 16 days, an overshoot.",
+    "notes": "2:1 reward/risk; breakeven $410 (~4.4% above reference); tactical mean-reversion trade with 43 days to expiry.",
+    "expirationDate": "2026-12-18",
+    "netCostBasis": 20.0,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 390,
+        "premium": 30.0
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 450,
+        "premium": 10.0
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-11-05",
+        "price": 392.68,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 392.68,
+    "latestPrice": 392.68,
+    "changePct": 0.0
   }
 ]
