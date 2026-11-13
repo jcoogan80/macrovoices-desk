@@ -149,6 +149,21 @@ function viewEpisodeList() {
   `;
 }
 
+// Slide decks / guest pieces / transcript published by MacroVoices for this episode.
+// Links point at macrovoices.com (files are not re-hosted here).
+function renderDownloads(ep) {
+  const dl = ep.downloads || [];
+  if (!dl.length) return '';
+  const icon = k => k === 'deck' ? 'Slide deck' : k === 'transcript' ? 'Transcript' : k === 'audio' ? 'Audio' : 'Download';
+  return `
+    <div class="card downloads-card">
+      <span class="card-label">Slides &amp; downloads</span>
+      <ul class="downloads-list">
+        ${dl.map(d => `<li><a href="${d.url}" target="_blank" rel="noopener"><span class="dl-kind dl-${d.kind || 'file'}">${icon(d.kind)}</span>${d.label} <span class="dl-ext">PDF ↗</span></a></li>`).join('')}
+      </ul>
+    </div>`;
+}
+
 function viewEpisodeDetail(epNum) {
   const ep = EPISODES.find(e => e.episode === epNum);
   if (!ep) return `<p>Episode not found.</p>`;
@@ -183,6 +198,8 @@ function viewEpisodeDetail(epNum) {
     <div class="ep-detail-meta">
       ${ep.guestRole ? ep.guestRole + '<span class="sep">·</span>' : ''}${ep.hosts}<span class="sep">·</span>Recorded ${ep.recorded}
     </div>
+
+    ${renderDownloads(ep)}
 
     <div class="card">
       <span class="card-label">Feature interview${ep.interviewTitle ? ': ' + ep.interviewTitle.replace(/^Feature Interview:\s*/, '') : ''}</span>
