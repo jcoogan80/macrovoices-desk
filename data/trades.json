@@ -4948,5 +4948,41 @@
     "entryPrice": 392.68,
     "latestPrice": 412.85,
     "changePct": 5.14
+  },
+  {
+    "episode": 558,
+    "ticker": "SRUUF",
+    "name": "Sprott Physical Uranium Trust",
+    "dateRec": "2026-11-12",
+    "structure": "Bull call spread on U.UN (Montreal options, CAD): long Jan 15 '27 C$25 call (~C$2.50) / short C$28 call (~C$0.90), C$1.60 net debit",
+    "direction": "long",
+    "thesis": "Uranium's supply deficit is independent of the AI cycle, yet the trust is being sold with the AI basket and trades at a deep discount to NAV (working NAV ~C$31.50). A narrowing of the discount to 5-10% (~C$28.35) reaches the upper strike without uranium rising; higher uranium prices are a second route.",
+    "notes": "PROXY: the trade is on the TSX listing U.UN in CAD (ref C$26.60), which Alpha Vantage doesn't carry, so the site tracks the US OTC line SRUUF (USD close $17.85 on 2026-11-12). Legs and net debit are scaled by the entry-day SRUUF/U.UN ratio (17.85/26.60 = 0.6711), which also embeds USD/CAD; original CAD legs: C$25/C$28 strikes, C$2.50/C$0.90 premiums, C$1.60 debit. Breakeven C$26.60 (the reference), max profit C$1.40 at >=C$28 (~0.9:1).",
+    "expirationDate": "2027-01-15",
+    "netCostBasis": 1.074,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 16.777,
+        "premium": 1.678
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 18.79,
+        "premium": 0.604
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-11-12",
+        "price": 17.85,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 17.85,
+    "latestPrice": 17.85,
+    "changePct": 0.0
   }
 ]
