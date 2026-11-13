@@ -506,6 +506,11 @@
         "kind": "transcript",
         "label": "Episode transcript",
         "url": "https://www.macrovoices.com/guest-content/list-guest-transcripts/6236-transcript-of-the-podcast-interview-between-erik-townsend-mike-alkin/file"
+      },
+      {
+        "kind": "chat",
+        "label": "Claude discussion of this episode",
+        "url": "https://claude.ai/share/a56e99a9-e58b-41aa-a833-e7013aa98418"
       }
     ]
   }

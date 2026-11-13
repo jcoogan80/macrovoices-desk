@@ -154,12 +154,12 @@ function viewEpisodeList() {
 function renderDownloads(ep) {
   const dl = ep.downloads || [];
   if (!dl.length) return '';
-  const icon = k => k === 'deck' ? 'Slide deck' : k === 'transcript' ? 'Transcript' : k === 'audio' ? 'Audio' : 'Download';
+  const icon = k => k === 'deck' ? 'Slide deck' : k === 'transcript' ? 'Transcript' : k === 'audio' ? 'Audio' : k === 'chat' ? 'Claude chat' : 'Download';
   return `
     <div class="card downloads-card">
       <span class="card-label">Slides &amp; downloads</span>
       <ul class="downloads-list">
-        ${dl.map(d => `<li><a href="${d.url}" target="_blank" rel="noopener"><span class="dl-kind dl-${d.kind || 'file'}">${icon(d.kind)}</span>${d.label} <span class="dl-ext">PDF ↗</span></a></li>`).join('')}
+        ${dl.map(d => `<li><a href="${d.url}" target="_blank" rel="noopener"><span class="dl-kind dl-${d.kind || 'file'}">${icon(d.kind)}</span>${d.label} <span class="dl-ext">${d.kind === 'chat' ? 'Link' : 'PDF'} ↗</span></a></li>`).join('')}
       </ul>
     </div>`;
 }
