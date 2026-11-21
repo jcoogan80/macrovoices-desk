@@ -5294,5 +5294,41 @@
     "entryPrice": 17.85,
     "latestPrice": 17.21,
     "changePct": -3.59
+  },
+  {
+    "episode": 559,
+    "ticker": "CPER",
+    "name": "COMEX copper (Mar '27 futures options), tracked via United States Copper Index Fund",
+    "dateRec": "2026-11-19",
+    "structure": "Bull call spread on March 2027 COMEX copper futures options expiring Dec 28 '26: long $6.00 call / short $6.25 call, ~$0.06/lb net debit (copper ~$5.74/lb)",
+    "direction": "long",
+    "thesis": "Building on Ole Hansen's view that copper's ~20% two-month drop is a speculative flush, not a fundamental change: electrification demand keeps building against constrained supply. Position for a timely partial rebound toward ~$6.25 (about half the decline) without needing new highs.",
+    "notes": "PROXY: the trade is on COMEX copper futures options (HG), which Alpha Vantage doesn't carry, so the site tracks CPER (close $33.76 on 2026-11-19). Strikes and net debit are scaled by the entry-day CPER/copper ratio (33.76/5.74 = 5.8815): $6.00/$6.25 become ~$35.29/$36.77 and the 6-cent debit becomes ~$0.353. Only the net debit was quoted, so it's assigned to the long leg (the expiry payoff only depends on the net). Original: max profit ~19 cents/lb at >= $6.25 (more than 3:1), breakeven ~$6.06; the main risk is timing (expires Dec 28).",
+    "expirationDate": "2026-12-28",
+    "netCostBasis": 0.353,
+    "legs": [
+      {
+        "type": "call",
+        "side": "long",
+        "strike": 35.29,
+        "premium": 0.353
+      },
+      {
+        "type": "call",
+        "side": "short",
+        "strike": 36.77,
+        "premium": 0.0
+      }
+    ],
+    "checkpoints": [
+      {
+        "date": "2026-11-19",
+        "price": 33.76,
+        "label": "Entry"
+      }
+    ],
+    "entryPrice": 33.76,
+    "latestPrice": 33.76,
+    "changePct": 0.0
   }
 ]
